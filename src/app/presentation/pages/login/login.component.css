@@ -1,5 +1,19 @@
+section{
+  background-image: url(src\assets\Images\image.webp);
+	-webkit-box-reflect: below 5px
+	linear-gradient(transparent, transparent, rgba(0, 0, 0, 0.4));
+	-webkit-transition: all 0.5s ease;
+	-o-transition: all 0.5s ease;
+	transition: all 0.5s ease;
+  height: 67.4vh;
+}
+
+form{
+  font-family: 'Play', sans-serif;
+}
+
 .btn-color{
-    background-color: #0e1c36;
+  background-color: #100f0f;
     color: #fff;
     
   }
@@ -10,12 +24,23 @@
     object-fit: cover;
   }
   
-  
-  
   .cardbody-color{
-    background-color: #ebf2fa;
+    background-color: rgb(3, 5, 69);
   }
   
   a{
     text-decoration: none;
+  }
+
+  button {
+    transition-duration: 250ms;
+    transition-timing-function: ease-out;
+    transition-property: opacity, transform;
+    font-family: 'Play', sans-serif;
+    
+  }
+
+  button:hover {
+    transform: scale(1.1);
+    opacity: 1;
   }

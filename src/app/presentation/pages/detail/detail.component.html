@@ -1,40 +1,30 @@
-<div class="container">
-    <div class="row">
-        
+<section>
+    <div class="container">
+        <div class="row">
+                <div class="col-6 d-flex flex-column justify-content-center align-items-center text-center">
+                    <img src= {{movieDetail?.image}} class="img-fluid">
+                </div>
             <div class="col-6">
-                <h1>Berserk</h1>
-                <img src= "/assets/images/Portadas/Berserk.png" class="img-fluid rounded mx-auto d-block">
+                <h1>{{movieDetail?.title}}</h1>
+                <h3>Rating: <i class="fa-solid fa-star" style="color: darkgoldenrod;"></i>{{movieDetail?.rating}}</h3>
+                <h5>Relase Date: {{movieDetail?.rDate}} </h5>
+                <h5>Genre: {{movieDetail?.genre}}</h5>
+                <h3>Description: </h3>
+                <p>{{movieDetail?.description}}</p>
+                <h5>Duration: {{movieDetail?.duration}}</h5>
+                <div class="actions">
+                    <button (click)="onAddToList()">
+                        <i class="fa-solid fa-plus"></i>
+                        Add Watch List
+                    </button>
+                </div>
             </div>
-        
-        <div class="col-4">
-            <h3>Description:</h3>
-            
-                <p>Berserk nos cuenta la historia de Guts , un antihéroe mercenario que vaga por el mundo en solitario en búsqueda de Apóstoles , unos seres demoníacos que antaño fueron humanos pero que sacrificaron una parte importante de sus vidas para conseguir poderes que les permitieran alcanzar sus más oscuros deseos.</p>
-            
-            <ul class="sci">
-                <li>
-                  <a ><i class="fa-regular fa-thumbs-up"></i></a>
-                </li>
-                <li>
-                  <a ><i class="fa-regular fa-clock"></i></a>
-                </li>
-            </ul>
-            <div class="actions">
-                <button type="button" class="" style="margin: 1%;" routerLink="/editAnime/"
-                >Update</button>
-                <button type="button" class="" style="margin: 1%; background-color: #a70707;"
-                >Delete</button>
+            <div class="g-start-2" style="grid-row: 2; display: flex; flex-direction: column; justify-content: center; align-items: center;">
+                <h3 style="margin: 10px;">Trailer:</h3>
+                <div class="ratio ratio-16x9">
+                    <iframe *ngIf="safeTrailerUrl" [src]="safeTrailerUrl" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                </div>
             </div>
         </div>
-        <div class="g-start-2" style="grid-row: 2">
-            <h3>Trailer:</h3>
-                        <div class="ratio ratio-16x9">
-                            <iframe width="560" height="315" src="https://www.youtube.com/embed/H6dkuEdzaFY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-              </div>
-            
-              <br>
-        </div>
-    
-    </div>
-    
-  </div>
+      </div>
+</section>

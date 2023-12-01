@@ -9,16 +9,26 @@ import { HttpClient } from '@angular/common/http';
 export class MoviesService {
   arrayMovies: Movie[] = [];
   arrayObs: BehaviorSubject<Movie[]> = new BehaviorSubject<Movie[]>([]);
-  constructor(private http: HttpClient) {}
+
+
+  constructor(private http: HttpClient) {
+    this.loadMovies();
+  }
+
+  private loadMovies() {
+    this.http.get<Movie[]>('../../../assets/data/Movies.JSON').subscribe((movies) => {
+      this.arrayObs.next(movies);
+    });
+  }
+
   get movieList() {
     return this.http.get<Movie[]>('../../../assets/data/Movies.JSON');
   }
 
-  get movieDetail(): (id: number) => Observable<Movie | undefined> {
-    return (id: number) => {
-      return this.arrayObs.pipe(
-        map((movies) => movies.find((movie) => movie.id === id))
-      );
-    };
+  getMovieDetail(id: number): Observable<Movie | undefined> {
+    return this.arrayObs.pipe(
+      map((movies) => movies.find((movie) => movie.id === id))
+    );
   }
+  
 }

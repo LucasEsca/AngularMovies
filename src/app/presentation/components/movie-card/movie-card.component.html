@@ -1,13 +1,15 @@
 <div class="card">
-    <img src= "{{movie.image}}" (click)="goToDetail()">
-    <div class="descriptions">
-        <h1>{{movie.title}}</h1>
+    <img src= "{{movie.image}}" routerLink="/detail/{{movie.id}}">
+    <div class="descriptions" routerLink="/detail/{{movie.id}}">
+        <h1 style="font-size: 2.5vh;">{{movie.title}}</h1>
         <p style="font-size: 1.5vh;">
             {{movie.description}}
         </p>
         <p style="font-size: 1.5vh;">
            Rating: <i class="fa-solid fa-star" style="color: darkgoldenrod;"></i> {{movie.rating}}
-        </p>
+        </p><p style="font-size: 1.5vh;">
+            Duration:{{movie.duration}}
+         </p>
         <button (click)="onAddToList()">
             <i class="fa-solid fa-plus"></i>
             Add Watch List

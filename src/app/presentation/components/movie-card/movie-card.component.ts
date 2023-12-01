@@ -17,8 +17,5 @@ export class MovieCardComponent {
   }
   onDelete() {
   }
-  goToDetail() {
-    this.router.navigate(['']);
-  }
   
 }
