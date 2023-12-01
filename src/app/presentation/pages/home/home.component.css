@@ -16,6 +16,14 @@
 	transition: all 0.5s ease;
   }
 
+  .sortButtons {
+    display: flex;
+    gap: 10px;
+  }
+  .sortButtons button {
+    max-width: 10vw;
+  }
+
   h1{
     font-size: 10em;
     color: whitesmoke;
@@ -45,10 +53,9 @@ button:hover {
 
 .grid {
 	display: grid;
-	grid-template-columns: repeat(auto-fill, minmax(25rem, 1fr));
-	gap: 20px;
+	grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+	gap: 5px;
 	justify-content: center;
 	margin: 0 auto;
 	max-width: 100vw;
-	padding: 20px;
   }

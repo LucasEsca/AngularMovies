@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { BehaviorSubject, Observable, map } from 'rxjs';
+import { BehaviorSubject, Observable, map, tap } from 'rxjs';
 import { Movie } from '../models/movie.interface';
 import { HttpClient } from '@angular/common/http';
 
@@ -7,6 +7,7 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root'
 })
 export class MoviesService {
+  originalMovies: Movie[] = [];
   arrayMovies: Movie[] = [];
   arrayObs: BehaviorSubject<Movie[]> = new BehaviorSubject<Movie[]>([]);
 
@@ -22,7 +23,14 @@ export class MoviesService {
   }
 
   get movieList() {
-    return this.http.get<Movie[]>('../../../assets/data/Movies.JSON');
+    return this.http.get<Movie[]>('../../../assets/data/Movies.JSON')
+      .pipe(
+        tap((movies) => {
+          this.originalMovies = [...movies];
+          this.arrayMovies = [...movies];
+          this.arrayObs.next(this.arrayMovies);
+        })
+      );
   }
 
   getMovieDetail(id: number): Observable<Movie | undefined> {
@@ -30,5 +38,10 @@ export class MoviesService {
       map((movies) => movies.find((movie) => movie.id === id))
     );
   }
+
+  getOriginalOrder(): Movie[] {
+    return [...this.originalMovies];
+  }
+
   
 }

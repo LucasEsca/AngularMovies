@@ -7,7 +7,7 @@
             <div class="col-6">
                 <h1>{{movieDetail?.title}}</h1>
                 <h3>Rating: <i class="fa-solid fa-star" style="color: darkgoldenrod;"></i>{{movieDetail?.rating}}</h3>
-                <h5>Relase Date: {{movieDetail?.rDate}} </h5>
+                <h5>Relase Date: {{movieDetail!.rDate.day}}/{{movieDetail!.rDate.month}}/{{movieDetail!.rDate.year}} </h5>
                 <h5>Genre: {{movieDetail?.genre}}</h5>
                 <h3>Description: </h3>
                 <p>{{movieDetail?.description}}</p>

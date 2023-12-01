@@ -9,6 +9,8 @@ import { Movie } from 'src/app/data/models/movie.interface';
 })
 export class HomeComponent implements OnInit {
   arrayMovies: Movie[] = [];
+  sortByTitle: boolean = false;
+  sortByDate: boolean = false;
 
   constructor(private moviesS: MoviesService) {}
 
@@ -17,5 +19,35 @@ export class HomeComponent implements OnInit {
       this.arrayMovies = data;
       console.log(this.arrayMovies);
     });
+  }
+
+  sortList(order: string): void {
+    switch (order) {
+      case 'default':
+        this.arrayMovies = this.moviesS.getOriginalOrder();
+        break;
+      case 'titleAsc':
+        this.arrayMovies = this.arrayMovies.slice().sort((a, b) => a.title.localeCompare(b.title));
+        break;
+      case 'titleDesc':
+        this.arrayMovies = this.arrayMovies.slice().sort((a, b) => b.title.localeCompare(a.title));
+        break;
+      case 'dateAsc':
+        // Orden por fecha ascendente
+        this.arrayMovies = this.arrayMovies.slice().sort((a, b) => {
+          const dateA = new Date(a.rDate.year, a.rDate.month - 1, a.rDate.day);
+          const dateB = new Date(b.rDate.year, b.rDate.month - 1, b.rDate.day);
+          return dateA.getTime() - dateB.getTime();
+        });
+        break;
+      case 'dateDesc':
+        // Orden por fecha descendente
+        this.arrayMovies = this.arrayMovies.slice().sort((a, b) => {
+          const dateA = new Date(a.rDate.year, a.rDate.month - 1, a.rDate.day);
+          const dateB = new Date(b.rDate.year, b.rDate.month - 1, b.rDate.day);
+          return dateB.getTime() - dateA.getTime();
+        });
+        break;
+    }
   }
 }

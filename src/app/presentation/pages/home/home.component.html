@@ -1,19 +1,15 @@
-<!--<div class="top">
-	<div class="columns">
-		<div class="column is-full featured_wrapper p-0">
-			<img src="\assets\Images\image.webp" class="featured img fluid">
-			<div class="title_wrapper">
-				<h1 class="title text-center">The Untold Story of the great Lorem Ipsum</h1>
-				<button class="button is-medium">Watch It Now</button>
-			</div>
-		</div>
-	</div>
-</div>-->
 <div class="header">
     <section class="headerb d-flex flex-column align-items-center justify-content-center">
         <div class="bg-5 text-center">
           <h1 class="animated-shadow">Movie App</h1>
           <button routerLink="/watchList" class="button is-medium">See your list!</button>
+        </div>
+        <div class="sortButtons">
+          <button (click)="sortList('default')">Default</button>
+          <button (click)="sortList('titleAsc')">Title Asc</button>
+          <button (click)="sortList('titleDesc')">Title Desc</button>
+          <button (click)="sortList('dateAsc')">Date Asc</button>
+          <button (click)="sortList('dateDesc')">Date Desc</button>
         </div>
       </section>
 </div>

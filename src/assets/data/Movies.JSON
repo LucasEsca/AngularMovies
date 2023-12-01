@@ -6,7 +6,11 @@
     "rating": 7.8,
     "duration": "2h 30 min",
     "genre": "Action, Sci-Fi",
-    "rDate": "03/07/20",
+    "rDate": {
+        "year": 20,
+        "month": 7,
+        "day": 3
+      },
     "trailer": "LdOM0x0XDMo",
     "image":"/assets/Images/Tenet.webp"},
 {
@@ -16,7 +20,11 @@
     "rating": 8.4,
     "duration": "1h 57min",
     "genre": "Action, Animation, Adventure",
-    "rDate": "14/12/18",
+    "rDate": {
+        "year": 18,
+        "month": 12,
+        "day": 14
+      },
     "trailer": "tg52up16eq0",
     "image":"/assets/Images/Spider Man.webp"},
 {
@@ -26,7 +34,11 @@
     "rating": 7.9,
     "duration": "2h 10min",
     "genre": "Comedy, Crime, Drama",
-    "rDate": "27/11/19",
+    "rDate": {
+        "year": 19,
+        "month": 11,
+        "day": 27
+      },
     "trailer": "qGqiHJTsRkQ",
     "image":"/assets/Images/Knives Out.webp"},
 {
@@ -36,7 +48,11 @@
     "rating": 8.0,
     "duration": "2h 1min",
     "genre": "Action, Adventure, Comedy",
-    "rDate": "01/08/14",
+    "rDate": {
+        "year": 14,
+        "month": 8,
+        "day": 1
+      },
     "trailer": "d96cjJhvlMA",
     "image":"/assets/Images/Guardians of The Galaxy.webp"},
 {
@@ -46,7 +62,11 @@
     "rating": 7.3,
     "duration": "2h 21min",
     "genre": "Action, Adventure, Sci-Fi",
-    "rDate": "01/05/15",
+    "rDate": {
+        "year": 15,
+        "month": 5,
+        "day": 1
+      },
     "trailer": "tmeOjFno6Do",
     "image":"/assets/Images/Avengers.webp"}
 ]
