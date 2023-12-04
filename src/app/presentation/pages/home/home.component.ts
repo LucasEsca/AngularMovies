@@ -17,7 +17,6 @@ export class HomeComponent implements OnInit {
   ngOnInit(): void {
     this.moviesS.movieList.subscribe((data) => {
       this.arrayMovies = data;
-      console.log(this.arrayMovies);
     });
   }
 
@@ -33,7 +32,6 @@ export class HomeComponent implements OnInit {
         this.arrayMovies = this.arrayMovies.slice().sort((a, b) => b.title.localeCompare(a.title));
         break;
       case 'dateAsc':
-        // Orden por fecha ascendente
         this.arrayMovies = this.arrayMovies.slice().sort((a, b) => {
           const dateA = new Date(a.rDate.year, a.rDate.month - 1, a.rDate.day);
           const dateB = new Date(b.rDate.year, b.rDate.month - 1, b.rDate.day);
@@ -41,7 +39,6 @@ export class HomeComponent implements OnInit {
         });
         break;
       case 'dateDesc':
-        // Orden por fecha descendente
         this.arrayMovies = this.arrayMovies.slice().sort((a, b) => {
           const dateA = new Date(a.rDate.year, a.rDate.month - 1, a.rDate.day);
           const dateB = new Date(b.rDate.year, b.rDate.month - 1, b.rDate.day);

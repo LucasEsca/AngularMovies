@@ -13,10 +13,10 @@
                 <p>{{movieDetail?.description}}</p>
                 <h5>Duration: {{movieDetail?.duration}}</h5>
                 <div class="actions">
-                    <button (click)="onAddToList()">
+                    <button (click)="onAddToList()" [disabled]="isInWatchlist()">
                         <i class="fa-solid fa-plus"></i>
-                        Add Watch List
-                    </button>
+                        {{ isInWatchlist() ? 'On List' : 'Add Watch List' }}
+                      </button>
                 </div>
             </div>
             <div class="g-start-2" style="grid-row: 2; display: flex; flex-direction: column; justify-content: center; align-items: center;">

@@ -12,7 +12,8 @@
         "day": 3
       },
     "trailer": "LdOM0x0XDMo",
-    "image":"/assets/Images/Tenet.webp"},
+    "image":"/assets/Images/Tenet.webp",
+    "isOnList":false},
 {
     "id":2,
     "title": "Spider-Man: Into the Spider-Verse",
@@ -26,7 +27,8 @@
         "day": 14
       },
     "trailer": "tg52up16eq0",
-    "image":"/assets/Images/Spider Man.webp"},
+    "image":"/assets/Images/Spider Man.webp",
+    "isOnList":false},
 {
     "id":3,
     "title": "Knives Out",
@@ -40,7 +42,8 @@
         "day": 27
       },
     "trailer": "qGqiHJTsRkQ",
-    "image":"/assets/Images/Knives Out.webp"},
+    "image":"/assets/Images/Knives Out.webp",
+    "isOnList":false},
 {
     "id": 4,
     "title": "Guardians of the Galaxy",
@@ -54,7 +57,8 @@
         "day": 1
       },
     "trailer": "d96cjJhvlMA",
-    "image":"/assets/Images/Guardians of The Galaxy.webp"},
+    "image":"/assets/Images/Guardians of The Galaxy.webp",
+    "isOnList":false},
 {
     "id": 5,
     "title": "Avengers: Age of Ultron",
@@ -68,5 +72,6 @@
         "day": 1
       },
     "trailer": "tmeOjFno6Do",
-    "image":"/assets/Images/Avengers.webp"}
+    "image":"/assets/Images/Avengers.webp",
+    "isOnList":false}
 ]

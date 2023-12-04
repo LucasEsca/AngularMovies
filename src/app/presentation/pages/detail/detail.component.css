@@ -59,3 +59,10 @@ h1,h3,h5,p{
     aspect-ratio: 1/.6;
     margin-bottom: 5%;
   }
+
+button[disabled]{
+  background-color: #878787;
+  animation: none;
+  transition: none;
+  cursor: default;
+  }

@@ -3,6 +3,7 @@ import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Movie } from 'src/app/data/models/movie.interface';
 import { MoviesService } from 'src/app/data/services/movies.service';
+import { WatchlistService } from 'src/app/data/services/watchlist.service';
 
 @Component({
   selector: 'app-detail',
@@ -17,7 +18,8 @@ export class DetailComponent implements OnInit {
   constructor(
     private route: ActivatedRoute,
     private moviesService: MoviesService,
-    private sanitizer: DomSanitizer
+    private sanitizer: DomSanitizer,
+    private watchListService: WatchlistService
   ) {}
 
   ngOnInit() {
@@ -43,5 +45,12 @@ export class DetailComponent implements OnInit {
     return this.sanitizer.bypassSecurityTrustResourceUrl(url);
   }
   onAddToList() {
+    if (this.movieDetail) {
+      this.watchListService.addMovie(this.movieDetail);
+    }
+  }
+
+  isInWatchlist(): boolean {
+    return this.movieId !== undefined && this.watchListService.isInWatchlist(this.movieId);
   }
 }

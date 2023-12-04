@@ -1,6 +1,6 @@
 <div class="card">
     <img src= "{{movie.image}}" routerLink="/detail/{{movie.id}}">
-    <div class="descriptions" routerLink="/detail/{{movie.id}}">
+    <div class="descriptions" >
         <h1 style="font-size: 2.5vh;">{{movie.title}}</h1>
         <p style="font-size: 1.5vh;">
             {{movie.description}}
@@ -10,9 +10,13 @@
         </p><p style="font-size: 1.5vh;">
             Duration:{{movie.duration}}
          </p>
-        <button (click)="onAddToList()">
+         <button (click)="onAddToList()" [disabled]="isInWatchlist()">
             <i class="fa-solid fa-plus"></i>
-            Add Watch List
+            {{ isInWatchlist() ? 'On List' : 'Add Watch List' }}
+          </button>
+        <button routerLink="/detail/{{movie.id}}">
+            <i class="fa-solid fa-plus"></i>
+            See Detail
         </button>
     </div>
 </div>
