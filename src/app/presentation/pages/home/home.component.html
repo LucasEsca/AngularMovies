@@ -5,11 +5,11 @@
           <button routerLink="/watchList" class="button is-medium">See your list!</button>
         </div>
         <div class="sortButtons">
-          <button (click)="sortList('default')">Default</button>
-          <button (click)="sortList('titleAsc')"><i class="fa-solid fa-caret-down"></i>A-Z</button>
-          <button (click)="sortList('titleDesc')"><i class="fa-solid fa-caret-down"></i>Z-A</button>
-          <button (click)="sortList('dateAsc')"><i class="fa-solid fa-caret-up"></i>Date</button>
-          <button (click)="sortList('dateDesc')"><i class="fa-solid fa-caret-down"></i>Date</button>
+          <button (click)="sortList('default')"><i class="fa-solid fa-rotate"></i></button>
+          <button (click)="sortList('titleAsc')"><i class="fa-solid fa-caret-down"></i>A</button>
+          <button (click)="sortList('titleDesc')"><i class="fa-solid fa-caret-down"></i>Z</button>
+          <button (click)="sortList('dateAsc')"><i class="fa-solid fa-caret-up"></i><i class="fa-solid fa-calendar-days"></i></button>
+          <button (click)="sortList('dateDesc')"><i class="fa-solid fa-caret-down"></i><i class="fa-solid fa-calendar-days"></i></button>
         </div>
       </section>
 </div>

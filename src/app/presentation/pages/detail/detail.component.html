@@ -1,17 +1,19 @@
 <section>
     <div class="container">
         <div class="row">
-                <div class="col-6 d-flex flex-column justify-content-center align-items-center text-center">
+                <div class="left col-6 d-flex flex-column justify-content-center align-items-center text-center">
                     <img src= {{movieDetail?.image}} class="img-fluid">
+                    <h3 class="rating">Rating: <i class="fa-solid fa-star" style="color: darkgoldenrod;"></i>{{movieDetail?.rating}}</h3>
+                    
                 </div>
-            <div class="col-6">
-                <h1>{{movieDetail?.title}}</h1>
-                <h3>Rating: <i class="fa-solid fa-star" style="color: darkgoldenrod;"></i>{{movieDetail?.rating}}</h3>
-                <h5>Relase Date: {{movieDetail!.rDate.day}}/{{movieDetail!.rDate.month}}/{{movieDetail!.rDate.year}} </h5>
-                <h5>Genre: {{movieDetail?.genre}}</h5>
-                <h3>Description: </h3>
-                <p>{{movieDetail?.description}}</p>
-                <h5>Duration: {{movieDetail?.duration}}</h5>
+            <div class="right col-6">
+                <h1 class="title">{{movieDetail?.title}}</h1>
+                <h3 class="rating">Rating: <i class="fa-solid fa-star" style="color: darkgoldenrod;"></i>{{movieDetail?.rating}}</h3>
+                <h5 class="rDate">Relase Date: {{movieDetail!.rDate.day}}/{{movieDetail!.rDate.month}}/{{movieDetail!.rDate.year}} </h5>
+                <h5 class="genre">Genre: {{movieDetail?.genre}}</h5>
+                <h3 class="titDesc">Description: </h3>
+                <p class="description">{{movieDetail?.description}}</p>
+                <h5 class="duration">Duration: {{movieDetail?.duration}}</h5>
                 <div class="actions">
                     <button (click)="onAddToList()" [disabled]="isInWatchlist()">
                         <i class="fa-solid fa-plus"></i>
