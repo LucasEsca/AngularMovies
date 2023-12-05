@@ -13,9 +13,13 @@
   
       <div id="navbarSupportedContent" class="collapse navbar-collapse">
         <ul class="navbar-nav ml-auto">
-          <li class="nav-item"><a routerLink="/home" class="nav-link">Home <span class="sr-only">(current)</span></a></li>
-          <li class="nav-item"><a routerLink="" class="nav-link">Login</a></li>
+          <li class="nav-item" *ngIf="isAuthenticated()"><a class="nav-link">Hello! User <i class="fa-regular fa-user"></i></a></li>
+          <li class="nav-item"><a routerLink="/home" class="nav-link">Home</a></li>
+          <li class="nav-item" *ngIf="!isAuthenticated()"><a routerLink="" class="nav-link">Login</a></li>
           <li class="nav-item"><a routerLink="/watchList" class="nav-link">Watch List</a></li>
+          <li class="nav-item" *ngIf="isAuthenticated()">
+            <button (click)="logout()" class="btn btn-link nav-link">Logout</button>
+          </li>
         </ul>
       </div>
     </div>

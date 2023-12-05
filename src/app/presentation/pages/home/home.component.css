@@ -22,22 +22,26 @@
   }
   .sortButtons button {
     max-width: 10vw;
+    border-radius: 10%;
+    color: #100f0f;
+    background-color:#fff ;
+    padding: 0.2rem 1rem;
+    
   }
 
   h1{
-    font-size: 10em;
+    font-size: 13vh;
     color: whitesmoke;
-    letter-spacing: 1rem;
     font-family: 'Play', sans-serif;
   }
 
 button {
-	background: #100f0f !important;
-	color: #fff !important;
+	background: #100f0f ;
+	color: #fff ;
 	font-size: 1.5vh;
 	padding: 0.5rem 3rem;
 	outline: none;
-	border: 0 !important;
+	border: 0 ;
 	margin-bottom: 1vh;
 	transition-duration: 250ms;
     transition-timing-function: ease-out;

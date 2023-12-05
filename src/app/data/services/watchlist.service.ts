@@ -13,6 +13,11 @@ export class WatchlistService implements WatchList {
     this.loadMovies();
   }
 
+  clearWatchlist(): void {
+    this.movies = [];
+    this.saveMovies();
+  }
+
   addMovie(movie: Movie): void {
     if (!this.movies.find((m) => m.id === movie.id)) {
       movie.isOnList = true;

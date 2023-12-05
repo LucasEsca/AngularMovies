@@ -1,26 +1,36 @@
-<div class="wrapper">
-	<div class="main_card" *ngFor="let movie of watchlist">
-		<div class="card_left">
-			<div class="card_datails">
-				<h1>{{movie.title}}</h1>
-				<button routerLink="/detail/{{movie.id}}">
-                    <i class="fa-solid fa-plus"></i>
-                    See Detail
-                </button>
-			<div class="social-btn">
-				<button>
-					<i class="fas fa-star"></i>{{movie.rating}}
-				</button>
-				<button (click)="onDelete(movie)">
-					<i class="fas fa-star"></i>Remove Movie
-				</button>
-			</div>	
-			</div>
+<div class="main_card-container">
+	<ng-container *ngIf="isWatchlistEmpty(); else watchlistNotEmpty">
+		<div class="message-container">
+		<h3>Watch List is empty. Go to <a routerLink="/home">Home</a> and add a movie!.</h3>
 		</div>
-		<div class="card_right">
-			<div class="img_container">
-				<img src={{movie.image}} alt="">
+	  </ng-container>
+	  <ng-template #watchlistNotEmpty>
+		<div class="main_card" *ngFor="let movie of watchlist">
+			<div class="card_left">
+				<div class="card_datails">
+					<h1>{{movie.title}}</h1>
+					<button routerLink="/detail/{{movie.id}}">
+						<i class="fa-solid fa-plus"></i>
+						See Detail
+					</button>
+					<button>
+						<i class="fas fa-star"></i>{{movie.rating}}
+					</button>
+					<button>
+						{{movie.genre}}
+					</button>	
 				</div>
 			</div>
-		</div>
-	</div>
+			<div class="card_right">
+				<div class="img_container">
+					<img src={{movie.image}} alt="">
+					</div>
+					<div class="social-btn">
+						<button (click)="onDelete(movie)">
+							<i class="fa-solid fa-delete-left"></i>
+						</button>
+					</div>
+				</div>
+			</div>
+	  </ng-template>
+</div>

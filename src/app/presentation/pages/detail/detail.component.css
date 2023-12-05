@@ -55,14 +55,14 @@ h1,h3,h5,p{
 }
 
   .ratio{
-    max-width: 40vw;
+    max-width: 60vw;
     aspect-ratio: 1/.6;
     margin-bottom: 5%;
   }
 
 button[disabled]{
-  background-color: #878787;
-  animation: none;
-  transition: none;
-  cursor: default;
+  background-color: #878787 !important;
+  transform: none !important;
+  transition: none !important;
+  cursor: default !important;
   }

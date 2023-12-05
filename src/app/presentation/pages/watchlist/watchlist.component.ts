@@ -21,4 +21,8 @@ export class WatchlistComponent implements OnInit{
     this.watchlistService.removeMovie(movie);
     this.watchlist = this.watchlistService.getWatchlist();
 }
+
+isWatchlistEmpty(): boolean {
+  return this.watchlistService.getWatchlist().length === 0;
+}
 }
