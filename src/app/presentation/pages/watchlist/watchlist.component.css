@@ -59,11 +59,12 @@
 }
 .social-btn {
 	display: flex;
+	width: 100%;
   }
 .social-btn  button{
 	background-color: rgb(52, 58, 64);
 	font-size: 1.8vh;
-	width: 14.5vw;
+	min-width: 14.5vw;
 	
 }
 button {
@@ -71,7 +72,7 @@ button {
 	border: none;
 	outline: none;
 	font-size: 1.5vh;
-	margin-top: 5%;
+	margin-top: 6%;
 	margin-left: 10px;
 	background: darkgoldenrod;
 	border-radius: 12px;
@@ -129,7 +130,7 @@ button:hover {
 		width: 50vw;
 		aspect-ratio: 1/1.35;
 		background: transparent;
-		margin: 10%;
+		margin: 12%;
 	  }
 	
 	  .card_right img {
@@ -137,8 +138,12 @@ button:hover {
 		aspect-ratio: 1/1.54;
 		padding: 0%;
 	  }
+	  .social-btn {
+		align-items: center;
+		justify-content: center;
+	  }
 	
 	  .social-btn button {
-		width: 100%; 
+		width: 100%;
 	  }
   }

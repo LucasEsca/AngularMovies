@@ -5,11 +5,15 @@ section{
 	-webkit-transition: all 0.5s ease;
 	-o-transition: all 0.5s ease;
 	transition: all 0.5s ease;
-  height: 67.4vh;
+  min-height: 67.9vh;
 }
 
 form{
   font-family: 'Play', sans-serif;
+}
+
+.card{
+  background: transparent;
 }
 
 .btn-color{
@@ -43,4 +47,10 @@ form{
   button:hover {
     transform: scale(1.1);
     opacity: 1;
+  }
+
+  @media (max-width:720px){
+    section{
+      min-height: 73vh;;
+    }
   }

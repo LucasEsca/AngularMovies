@@ -1,13 +1,4 @@
-#cards_landscape_wrap-2{
-    text-align: center;
-    background-color:rgb(3, 5, 69)
-  }
-  #cards_landscape_wrap-2 .container{
-    padding-top: 80px; 
-    padding-bottom: 100px;
-  }
-
-  .headerb {
+.headerb {
   background-image: url(src\assets\Images\image.webp);
 	-webkit-box-reflect: below 5px
 	linear-gradient(transparent, transparent, rgba(0, 0, 0, 0.4));
@@ -20,8 +11,7 @@
     display: flex;
     gap: 10px;
   }
-  .sortButtons button {
-    max-width: 10vw;
+  .sortButtons button{
     border-radius: 10%;
     color: #100f0f;
     background-color:#fff ;
@@ -54,12 +44,32 @@ button:hover {
     opacity: 1;
   }
 
+  #cards_landscape_wrap-2{
+    text-align: center;
+    background-color:rgb(3, 5, 69)
+  }
+  #cards_landscape_wrap-2 .container{
+    padding-top: 80px; 
+    padding-bottom: 100px;
+  }
 
 .grid {
-	display: grid;
-	grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
-	gap: 5px;
-	justify-content: center;
-	margin: 0 auto;
-	max-width: 100vw;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, min(15rem, 1fr));
+  gap: 1vw;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  max-width: 100vw;
+}
+
+  @media screen and (min-width: 527px) {
+    .grid {
+      grid-template-columns: repeat(auto-fill, minmax(15rem, 2fr));
+    }
+  }
+  @media screen and (max-width: 717px) {
+    .sortButtons button {
+      min-width: 15vw;
+    }
   }
