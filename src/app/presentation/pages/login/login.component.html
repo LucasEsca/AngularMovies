@@ -1,35 +1,28 @@
-<section>
-  <div class="container">
-    <div class="row">
-      <div class="col-md-6 offset-md-3">
-        <div class="card my-5">
-          <form class="card-body cardbody-color p-lg-5" (submit)="onSubmit(username.value, password.value, $event)">
-            <div class="text-center">
-              <img src="\assets\Images\cine-logo.png" class="img-fluid profile-image-pic img-thumbnail rounded-circle my-3"
-                width="200px" alt="profile">
-            </div>
-            <div class="mb-3">
-              <input type="text" class="form-control" id="Username" #username aria-describedby="emailHelp" 
-                placeholder="User Name">
-            </div>
-            <div class="mb-3 input-group">
-              <input type="{{ showPassword ? 'text' : 'password' }}" class="form-control" id="password" #password placeholder="Password">
-              <div class="input-group-append">
-                <button class="btn btn-outline-secondary" type="button" id="showPasswordBtn" 
-                  (click)="togglePasswordVisibility()">
-                  <i class="fa-solid fa-eye"></i>
-                </button>
+  <section>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 offset-md-3">
+          <div class="card my-5">
+  
+            <form class="card-body cardbody-color p-lg-5" (submit)="onSubmit(username.value, password.value)">
+  
+              <div class="text-center">
+                <img src="\assets\Images\cine-logo.png" class="img-fluid profile-image-pic img-thumbnail rounded-circle my-3"
+                  width="200px" alt="profile">
               </div>
-            </div>
-            <div class="text-center">
-              <button type="submit" class="btn btn-color px-5 mb-5 w-100">Login</button>
-            </div>
-          </form>
-          <div *ngIf="errorMessage" class="alert alert-danger mt-3">
-            {{ errorMessage }}
+  
+              <div class="mb-3">
+                <input type="text" class="form-control" id="Username" #username aria-describedby="emailHelp" 
+                placeholder="User Name">
+              </div>
+              <div class="mb-3">
+                <input type="password" class="form-control" id="password" #password placeholder="Password">
+              </div>
+              <div class="text-center"><button type="submit" class="btn btn-color px-5 mb-5 w-100">Login</button></div>
+            </form>
           </div>
+  
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
