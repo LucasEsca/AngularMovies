@@ -14,19 +14,23 @@ const routes: Routes = [
   {
     path: 'home',
     component: HomeComponent,
+    canActivate: [AuthGuard],
   },
   {
     path: 'detail/:id',
     component: DetailComponent,
+    canActivate: [AuthGuard],
   },
   {
     path: 'watchList',
     component: WatchlistComponent,
+    canActivate: [AuthGuard],
   },
   {
     path: '404',
     component: Error404Component,
   },
+  {path: '**', redirectTo: '404'},
 ];
 
 @NgModule({

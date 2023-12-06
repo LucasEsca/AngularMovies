@@ -9,10 +9,12 @@
                 width="200px" alt="profile">
             </div>
             <div class="mb-3">
+              <label for="Username"></label>
               <input type="text" class="form-control" id="Username" #username aria-describedby="emailHelp" 
                 placeholder="User Name">
             </div>
             <div class="mb-3 input-group">
+              <label for="password"></label>
               <input type="{{ showPassword ? 'text' : 'password' }}" class="form-control" id="password" #password placeholder="Password">
               <div class="input-group-append">
                 <button class="btn btn-outline-secondary" type="button" id="showPasswordBtn" 

@@ -1,56 +1,56 @@
-section{
+section {
   background-image: url(src\assets\Images\image.webp);
-	-webkit-box-reflect: below 5px
-	linear-gradient(transparent, transparent, rgba(0, 0, 0, 0.4));
-	-webkit-transition: all 0.5s ease;
-	-o-transition: all 0.5s ease;
-	transition: all 0.5s ease;
+  background-size: cover;
   min-height: 67.9vh;
+  -webkit-box-reflect: below 5px linear-gradient(transparent, transparent, rgba(0, 0, 0, 0.4));
+  -webkit-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
 }
 
-form{
+form {
   font-family: 'Play', sans-serif;
 }
 
-.card{
+.card {
   background: transparent;
 }
 
-.btn-color{
+.btn-color {
   background-color: #100f0f;
-    color: #fff;
-    
-  }
-  
-  .profile-image-pic{
-    height: 200px;
-    width: 200px;
-    object-fit: cover;
-  }
-  
-  .cardbody-color{
-    background-color: rgb(3, 5, 69);
-  }
-  
-  a{
-    text-decoration: none;
-  }
+  color: #fff;
+}
 
-  button {
-    transition-duration: 250ms;
-    transition-timing-function: ease-out;
-    transition-property: opacity, transform;
-    font-family: 'Play', sans-serif;
-    
-  }
+.profile-image-pic {
+  height: 200px;
+  width: 200px;
+  object-fit: cover;
+}
 
-  button:hover {
-    transform: scale(1.1);
-    opacity: 1;
-  }
+.cardbody-color {
+  background-color: rgb(3, 5, 69);
+}
 
-  @media (max-width:720px){
-    section{
-      min-height: 73vh;;
-    }
+a {
+  text-decoration: none;
+}
+
+button {
+  transition: 250ms ease-out;
+  font-family: 'Play', sans-serif;
+}
+
+button:hover {
+  transform: scale(1.1);
+  opacity: 1;
+}
+
+.input-group-append button {
+  cursor: pointer;
+}
+
+@media (max-width: 720px) {
+  section {
+    min-height: 73vh;
   }
+}

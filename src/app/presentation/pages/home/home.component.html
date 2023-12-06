@@ -1,24 +1,23 @@
 <div class="header">
-    <section class="headerb d-flex flex-column align-items-center justify-content-center">
-        <div class="bg-5 text-center">
-          <h1 class="animated-shadow">Movie App</h1>
-          <button routerLink="/watchList" class="button is-medium">See your list!</button>
-        </div>
-        <div class="sortButtons">
-          <button (click)="sortList('default')"><i class="fa-solid fa-rotate"></i></button>
-          <button (click)="sortList('titleAsc')"><i class="fa-solid fa-caret-down"></i>A</button>
-          <button (click)="sortList('titleDesc')"><i class="fa-solid fa-caret-down"></i>Z</button>
-          <button (click)="sortList('dateAsc')"><i class="fa-solid fa-caret-up"></i><i class="fa-solid fa-calendar-days"></i></button>
-          <button (click)="sortList('dateDesc')"><i class="fa-solid fa-caret-down"></i><i class="fa-solid fa-calendar-days"></i></button>
-        </div>
-      </section>
+  <section class="headerb d-flex flex-column align-items-center justify-content-center">
+    <div class="bg-5 text-center">
+      <h1 class="animated-shadow">Movie App</h1>
+      <button routerLink="/watchList" class="button is-medium">See your list!</button>
+    </div>
+    <div class="sortButtons">
+      <button (click)="sortList('default')"><i class="fa-solid fa-rotate"></i></button>
+      <button (click)="sortList('titleAsc')"><i class="fa-solid fa-caret-down"></i>A</button>
+      <button (click)="sortList('titleDesc')"><i class="fa-solid fa-caret-down"></i>Z</button>
+      <button (click)="sortList('dateAsc')"><i class="fa-solid fa-caret-up"></i><i class="fa-solid fa-calendar-days"></i></button>
+      <button (click)="sortList('dateDesc')"><i class="fa-solid fa-caret-down"></i><i class="fa-solid fa-calendar-days"></i></button>
+    </div>
+  </section>
 </div>
-<div id="cards_landscape_wrap-2" >
-<div class="container">
-<div class="grid">
-        <app-movie-card 
-        *ngFor="let movie of arrayMovies"
-        [movie]="movie"></app-movie-card>
-</div>
-</div>
+
+<div id="cards_landscape_wrap-2">
+  <div class="container">
+    <div class="grid">
+      <app-movie-card *ngFor="let movie of arrayMovies" [movie]="movie"></app-movie-card>
+    </div>
+  </div>
 </div>

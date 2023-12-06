@@ -1,4 +1,17 @@
 .navbar{
   font-family: 'Play', sans-serif;
 }
+
+.navbar-brand {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-brand i {
+  font-size: 24px;
+}
+
+.navbar-brand span {
+  margin-top: 2px;
+}
   
